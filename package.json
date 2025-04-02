@@ -1,0 +1,16 @@
+{
+  "name": "pvz-backend",
+  "version": "1.0.0",
+  "description": "API CRUD Plantas vs Zombies con imágenes en Binary Data",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.6.1",
+    "multer": "^1.4.5-lts.1"
+  }
+}
