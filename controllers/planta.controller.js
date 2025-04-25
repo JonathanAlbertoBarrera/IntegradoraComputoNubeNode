@@ -92,9 +92,15 @@ exports.verImagen = async (req, res) => {
     if (!planta || !planta.imagen || !planta.imagen.data) {
       return res.status(404).send('Imagen no encontrada');
     }
-    res.set('Content-Type', planta.imagen.contentType);
+
+    // Establecer el tipo de contenido adecuado (por ejemplo, image/png)
+    const contentType = planta.imagen.contentType || 'image/png';
+
+    // Configurar el encabezado y enviar la imagen directamente
+    res.set('Content-Type', contentType);
     res.send(planta.imagen.data);
   } catch (err) {
+    console.log(err);
     res.status(500).send(err.message);
   }
 };
